@@ -19,10 +19,14 @@ image:
 - Workflow: [.github/workflows/ci.yml](./.github/workflows/ci.yml)
 - Required checks: `npm run lint`, `npm test`, and `docker build`
 - Branch under review: `feat/readiness-signoff`
-- CI result: **pending until this branch push is processed**
+- Local source checks on this branch: `npm test` passed (3/3 tests) and
+  `npm run lint` passed.
+- CI result: **not available**. No workflow run was returned by the GitHub
+  Actions API after the branch push, so a passing hosted CI run cannot be
+  claimed.
 
-The passing run URL and commit SHA will be added after the branch push triggers
-the workflow. A green CI result is required before sign-off.
+A green hosted CI result is required before sign-off. The local checks do not
+replace the required hosted Docker build.
 
 ### Compose health
 
